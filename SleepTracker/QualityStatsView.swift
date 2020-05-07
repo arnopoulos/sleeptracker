@@ -43,6 +43,9 @@ class QualityStatsView: UIView {
         icon.translatesAutoresizingMaskIntoConstraints = false
         return icon
     }()
+    //Using a UIView here to take atvantage of the constraint system
+    //If this becomes a performance issue we can switch over to CoreAnimation
+    //or Core Graphics
     private let divider: UIView = UIView.divider()
     private let continueButton: UIButton = {
         let button = UIButton()

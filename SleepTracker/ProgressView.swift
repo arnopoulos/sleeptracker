@@ -8,6 +8,7 @@
 
 import UIKit
 
+//TODO: Add Animations
 class ProgressView: UIView {
 
     var progress: CGFloat = 0.0 {

@@ -8,6 +8,7 @@
 
 import UIKit
 
+//TODO: Add animations
 class BedStatsView: UIView {
 
     var rangeInBed: TimeRangeView.DateRange? {
@@ -25,12 +26,14 @@ class BedStatsView: UIView {
 
     private let timeInBed: TimeRangeView = {
         let timeRange = TimeRangeView(alignment: .right)
+        //TODO: Localize
         timeRange.title = "Time in bed"
         timeRange.tintColor = .customPurple
         return timeRange
     }()
     private let timeAsleep: TimeRangeView = {
         let timeRange = TimeRangeView(alignment: .left)
+        //TODO: Localize
         timeRange.title = "Time Asleep"
         timeRange.tintColor = .customBlue
         return timeRange
@@ -60,6 +63,8 @@ class BedStatsView: UIView {
         addSubview(timeAsleep)
         addSubview(middle)
 
+        //Explicitly using left and right anchors here because of localization issues that
+        //would occur with right to left languages
         let constraints = [
             timeInBed.centerYAnchor.constraint(equalTo: layoutMarginsGuide.centerYAnchor),
             timeInBedHeightConstraint,

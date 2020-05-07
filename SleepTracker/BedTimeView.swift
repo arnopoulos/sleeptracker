@@ -17,6 +17,7 @@ class BedTimeView: UIView {
 
     private let header: UILabel = {
         let label = UILabel()
+        //TODO: Localize
         label.text = "You've successfully saved your sleep entry for Sunday, Jan 6th"
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.numberOfLines = 0

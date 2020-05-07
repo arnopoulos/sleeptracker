@@ -58,11 +58,18 @@ class TimeRangeView: UIView {
     //Keeping these views private to allow for the underlying
     //implementation to change without having to change the
     //consumers of TimeRangeView
+
+    //Using a UIView here to take atvantage of the constraint system
+    //If this becomes a performance issue we can switch over to CoreAnimation
+    //or Core Graphics
     private let topDivider: UIView = UIView.divider()
     private let endLabel: UILabel = UILabel(fontSize: Constants.fontSize)
     private let titleLabel: UILabel = UILabel(fontSize: Constants.fontSize)
     private let durationLabel: UILabel = UILabel(fontSize: Constants.hoursFontSize, weight: .bold)
     private let beginLabel: UILabel = UILabel(fontSize: Constants.fontSize)
+    //Using a UIView here to take atvantage of the constraint system
+    //If this becomes a performance issue we can switch over to CoreAnimation
+    //or Core Graphics
     private let bottomDivider: UIView = UIView.divider()
     private lazy var main: UIStackView = {
         let main = UIStackView(arrangedSubviews: [titleLabel, durationLabel])
